@@ -1,0 +1,16 @@
+header{
+    background-color: $headerbgcolor;
+    padding: 1rem;
+    text-align: center;
+    a{
+        color: $headertextcolor;
+        font-size: 1.5rem;
+        cursor: default;
+        font-weight: bold;
+    }
+    a:hover{
+        color: $headertextcolor;
+        text-decoration: none;
+    }
+   
+}

@@ -1,0 +1,72 @@
+#properties {
+    .card {
+        border:none;
+        margin-bottom: 2px;
+        .card-header {
+            padding: 0;
+            border-radius: 0;
+            .btn-header-link {               
+                display: block;
+                text-align: left;
+                background: $bodybgcolor;
+                color: $propertypanelbgcolor;
+                padding: 0.5rem 1rem;
+            }
+            .btn-header-link:hover
+            {
+                text-decoration: none;
+            }
+            .btn-header-link:after {
+                content: "\f107";
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                float: right;
+            }
+            .btn-header-link.collapsed:after {
+                content: "\f106";
+            }
+        }
+        .card-body{
+            .btn-save
+            {
+                text-align: center;
+                .btn{
+                    border-radius: 0;
+                    padding: 0.3rem 2rem;
+                    background-color: $bodybgcolor;
+                    color: $propertypanelbgcolor;
+                    border:none;
+                }
+                .btn:hover{
+                    color: $bodybgcolor;
+                    background-color: $propertypanelbgcolor;
+                }
+            }
+        }
+    }
+}
+
+
+#main #faq .card .card-header .btn-header-link.collapsed {
+    background: #a541bb;
+    color: #fff;
+}
+
+#main #faq .card .card-header .btn-header-link.collapsed:after {
+    content: "\f106";
+}
+
+#main #faq .card .collapsing {
+    background: #ffe472;
+    line-height: 30px;
+}
+
+#main #faq .card .collapse {
+    border: 0;
+}
+
+#main #faq .card .collapse.show {
+    background: #ffe472;
+    line-height: 30px;
+    color: #222;
+}

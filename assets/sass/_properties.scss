@@ -26,47 +26,29 @@
                 content: "\f106";
             }
         }
-        .card-body{
-            .btn-save
-            {
-                text-align: center;
-                .btn{
-                    border-radius: 0;
-                    padding: 0.3rem 2rem;
-                    background-color: $bodybgcolor;
-                    color: $propertypanelbgcolor;
-                    border:none;
-                }
-                .btn:hover{
-                    color: $bodybgcolor;
-                    background-color: $propertypanelbgcolor;
-                }
-            }
-        }
+        
+       
     }
 }
 
-
-#main #faq .card .card-header .btn-header-link.collapsed {
-    background: #a541bb;
-    color: #fff;
+.btn-save
+{
+    text-align: center;
+    margin-top: 1rem;
+    .btn{
+        border-radius: 0;
+        padding: 0.3rem 2rem;
+        background-color: $bodybgcolor;
+        color: $propertypanelbgcolor;
+        border:none;
+    }
+    .btn:hover{
+        color: $bodybgcolor;
+        background-color: $headerbgcolor;
+    }
 }
 
-#main #faq .card .card-header .btn-header-link.collapsed:after {
-    content: "\f106";
-}
-
-#main #faq .card .collapsing {
-    background: #ffe472;
-    line-height: 30px;
-}
-
-#main #faq .card .collapse {
-    border: 0;
-}
-
-#main #faq .card .collapse.show {
-    background: #ffe472;
-    line-height: 30px;
-    color: #222;
+.colorpicker-element .input-group-addon i, .colorpicker-element .add-on i{
+    height: calc(1.5em + .75rem + 2px) !important;
+    width: 40px !important;
 }

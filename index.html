@@ -17,7 +17,10 @@
     <!-- ===================== End Default servicenow Styles ======================== -->
     <!-- Custom Styles -->
     <link href="assets/css/servicenow.theme.min.css" rel="stylesheet" />
-
+    <!-- ==================== Start Bootstrap Color Picker CSS ============================= -->
+    <link href="assets/plugins/bootstrap-colorpicker/css/bootstrap-colorpicker.css" rel="stylesheet">
+    <!-- ==================== End Bootstrap Color Picker CSS ============================= -->
+    
     <!-- =======================================================
     * Website Name: servicenow - v1.0.0
     * Author: Vijay
@@ -36,64 +39,98 @@
 
                 <div class="main-panel property-panel">
                     <h2>Properties</h2>
+                    <form id="frmProperty">
+                        <div class="accordion" id="properties">
+                            <div class="card">
+                                <div class="card-header" id="propertieshead1">
+                                    <a href="#" class="btn-header-link " data-toggle="collapse" data-target="#properties1"
+                                       aria-expanded="true" aria-controls="properties1">Property 1</a>
+                                </div>
 
-                    <div class="accordion" id="properties">
-                        <div class="card">
-                            <div class="card-header" id="propertieshead1">
-                                <a href="#" class="btn-header-link collapsed" data-toggle="collapse" data-target="#properties1"
-                                   aria-expanded="false" aria-controls="properties1">Tag Line</a>
-                            </div>
+                                <div id="properties1" class="collapse show" aria-labelledby="propertieshead1" data-parent="#properties">
+                                    <div class="card-body">
 
-                            <div id="properties1" class="collapse" aria-labelledby="propertieshead1" data-parent="#properties">
-                                <div class="card-body">
-                                    <form>
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="form-group">
                                                     <label>Tag Line</label>
-                                                    <input type="text" class="form-control" placeholder="Tag Line" id="txtTagLine" required>
+                                                    <input type="text" class="form-control" placeholder="Tag Line" id="txtTagLine" name="txtTagLine" required>
                                                 </div>
                                             </div>
-                                            <div class="col-12 btn-save">
-                                                <button type="submit" class="btn btn-primary" id="btnSaveTagLine">Save</button>
-                                            </div>
+
                                         </div>
-                                        
-                                    </form>
+
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="propertieshead2">
-                                <a href="#" class="btn-header-link collapsed" data-toggle="collapse" data-target="#properties2"
-                                   aria-expanded="false" aria-controls="properties2">Property 2</a>
-                            </div>
+                            <div class="card">
+                                <div class="card-header" id="propertieshead2">
+                                    <a href="#" class="btn-header-link collapsed" data-toggle="collapse" data-target="#properties2"
+                                       aria-expanded="false" aria-controls="properties2">Property 2</a>
+                                </div>
 
-                            <div id="properties2" class="collapse" aria-labelledby="propertieshead2" data-parent="#properties">
-                                <div class="card-body">
-                                    <form>
+                                <div id="properties2" class="collapse" aria-labelledby="propertieshead2" data-parent="#properties">
+                                    <div class="card-body">
+
                                         <div class="row">
                                             <div class="col-12">
                                                 <div class="form-group">
-                                                    <label>Property 2</label>
-                                                    <input type="text" class="form-control" placeholder="Property 2" id="txtProperty2" required>
+                                                    <label>Image</label>
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="txtImage" name="txtImage" />
+                                                        <label class="custom-file-label" for="txtImage">Choose file</label>
+                                                    </div>
                                                 </div>
                                             </div>
-                                            <div class="col-12 btn-save">
-                                                <button type="submit" class="btn btn-primary" id="btnSaveProperty2">Save</button>
-                                            </div>
+
                                         </div>
 
-                                    </form>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="propertieshead3">
+                                    <a href="#" class="btn-header-link collapsed" data-toggle="collapse" data-target="#properties3"
+                                       aria-expanded="false" aria-controls="properties2">Property 3</a>
+                                </div>
+
+                                <div id="properties3" class="collapse" aria-labelledby="propertieshead3" data-parent="#properties">
+                                    <div class="card-body">
+
+                                        <div class="row">
+                                            <div class="col-12">
+                                                <div class="form-group">
+                                                    <label>Header Border Color</label>
+                                                    <div id="cp2" class="input-group colorpicker-component">
+                                                        <input type="text" value="#00AABB" class="form-control" name="txtColor" id="txtColor" />
+                                                        <span class="input-group-addon"><i></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <div class="row">
+                            <div class="col-12 btn-save">
+                                <button type="submit" class="btn btn-primary" id="btnSaveTagLine">Save</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
             <div class="col-xl-8">
                 <div class="main-panel preview-panel">
                     <h2>Preview</h2>
+                    <div class="servicenow-header">
+
+                    </div>
                     <div class="tag-line">
                         <div class="tagline-controls">
                             <h4>How can we help?</h4>
@@ -107,6 +144,10 @@
                             </div>
                         </div>
                     </div>
+                    <div class="result-json-output">
+                        <h2>Form Data</h2>
+                        <pre></pre>
+                    </div>
                 </div>
             </div>
         </div>
@@ -119,5 +160,18 @@
     <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- =============================== End Default servicenow Scripts ============================ -->
+    <!-- ==================== Start Bootstrap Color Picker JS ============================= -->
+    <script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <!-- ==================== End Bootstrap Color Picker JS ============================= -->
+    <script src="assets/plugins/bootstrap-colorpicker/js/form-to-json.js"></script>
+    <script>
+        $('#cp2').colorpicker();
+
+        jQuery(document).ready(function ($) {
+            // usage: 2
+            $('#frmProperty').formToJson('.result-json-output pre');
+
+        });
+    </script>
 </body>
 </html>

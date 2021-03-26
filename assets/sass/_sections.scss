@@ -23,13 +23,20 @@
             background-color: $bodybgcolor;
             color: $propertypanelbgcolor;           
         }
+        .servicenow-header
+        {
+            height: 50px;
+            background-color: $snheaderbgcolor;            
+            border-top: 3px solid $snheadertopbordercolor;
+            border-bottom: 3px solid $snheaderbottombordercolor;
+        }
         .tag-line
         {
             width: 100%;
-            height: 400px;
+            height: 300px;
             background-repeat: no-repeat;
             // background-image: url("../images/tagline-bg.jpg");
-            background-color: $bodybgcolor;
+            background-color: $taglinebgcolor;
             background-blend-mode: lighten;
             display: flex;
             justify-content: center;
